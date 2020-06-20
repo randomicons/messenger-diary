@@ -18,7 +18,7 @@ exports.showEntries = (senderId) => {
 }
 
 exports.showAnalysis = (senderId) => {
-  return {text: `${process.env.APP_URL}/user/${senderId}/analysis`}
+  return {text: `${process.env.APP_URL}/user/${senderId}/analysis/all`}
 }
 
 exports.getReportPermission = (senderId) => {
