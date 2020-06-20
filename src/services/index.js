@@ -56,7 +56,7 @@ exports.handleMessage = (senderId, receivedMessage) => {
 exports.handleOptin = (senderId, optin) => {
   if (optin.payload.startsWith("ONE_TIME_REPORT")) {
     const date = new Date()
-    date.setMilliseconds(date.getMilliseconds() + 2000)
+    date.setDate(date.getDate() + 7)
     schedule.scheduleJob(date, function () {
       const req = {
         "recipient": {
