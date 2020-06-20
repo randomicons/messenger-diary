@@ -1,0 +1,42 @@
+<html>
+<head>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Karma&family=Markazi+Text&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../styles.css">
+    <title>Diary Analysis</title>
+</head>
+<body>
+    <div id="nav">
+            <div class='button'><a href="/user/<%= id %>/entries/">Entries</a></div>
+        <% if (weekly) { %>
+            <div class='button'><a href="/user/<%= id %>/analysis/all">All time</a></div>
+        <%} else { %>
+            <div class='button'><a href="/user/<%= id %>/analysis/week"> Last week</a></div>
+        <% } %>
+    </div>
+    <div id="graph"> </div>
+    <script>
+    	var graph = document.getElementById('graph');
+    	var layout = {
+    	    title: "Mood Graph",
+    	    font: {size: 28},
+            yaxis: {fixedrange: true, title: {text: "Mood"}},
+            xaxis: {fixedrange: true, title: {text: "Date"}, automargin: true},
+        }
+        var config = {
+            responsive: true,
+            displayModeBar: false,
+        }
+    	Plotly.newPlot( graph, [{
+            x: [<%- date %>],
+            y: [<%- sentiment %>],
+            marker: {
+                size: 10
+            },
+            line: {
+                width: 4
+            }
+    	}], layout, config);
+    </script>
+<body>
+</html>

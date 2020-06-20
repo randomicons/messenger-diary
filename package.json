@@ -1,0 +1,37 @@
+{
+  "name": "messenger-diary",
+  "version": "1.0.0",
+  "description": "An messenger bot to record and analayze your thoughts",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "lint": "./node_modules/.bin/eslint ."
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.19",
+    "node-schedule": "^1.3.2",
+    "sentiment": "^5.0.2"
+  },
+  "engines": {
+    "node": "^8.10.0 || ^10.13.0 || >=11.10.1"
+  },
+  "repository": {
+    "url": "https://github.com/fbsamples/original-coast-clothing"
+  },
+  "author": "Sriram Bhat",
+  "keywords": [
+    "messenger",
+    "webhook"
+  ],
+  "devDependencies": {
+    "eslint": "^6.2.2",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "prettier": "^1.18.2"
+  }
+}

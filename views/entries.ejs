@@ -1,0 +1,19 @@
+<html>
+    <head>
+    <link href="https://fonts.googleapis.com/css2?family=Karma&family=Markazi+Text&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../../../styles.css">
+        <title>View Diary Entries</title>
+    </head>
+    <body>
+    <div class="button"><a href="/user/<%= id %>/analysis/all"> View Analysis</a></div>
+    <h2 class="title">Entries</h2>
+    <ol id="entries">
+    <% entries.forEach(function(entry) { %>
+            <li>
+                <span class="date"> <%= entry.date%></span>
+                <p class="text"> <%= entry.text %></p>
+            </li>
+    <% }); %>
+    </ol>
+    </body>
+</html>
