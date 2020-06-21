@@ -19,6 +19,8 @@ const {callSendAPI} = require('./util')
 
 exports.handleMessage = (senderId, receivedMessage) => {
   let response
+  if (!receivedMessage.text)
+    return
   const payload = receivedMessage.text.toLowerCase()
   if (payload === 'view diary') {
     response = showEntries(senderId)
