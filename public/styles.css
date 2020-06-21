@@ -1,5 +1,5 @@
 body {
-    font-size: 32px;
+    font-size: 48px;
     font-family: 'Markazi Text', serif;
     color: #282828;
 }
@@ -26,7 +26,7 @@ a {
     font-family: 'Markazi Text', serif;
     text-decoration: underline;
     color: #f4a261;
-    font-size: 32px;
+    font-size: 48px;
 }
 
 
@@ -54,7 +54,7 @@ a {
 }
 
 .date {
-    font-size: 48px;
+    font-size: 64px;
     color: #8ec5c7;
 }
 
