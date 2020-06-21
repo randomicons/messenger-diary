@@ -24,7 +24,7 @@ exports.setupWebviewRoutes = (app) => {
     try {
       const out = await UserModel.findById(req.params.id)
       const entries = out.entries
-        .sort((a, b) => a.date - b.date)
+        .sort((a, b) => b.date - a.date)
         .map(item => {
           const dateTimeFormat = new Intl.DateTimeFormat('en', {
             year: 'numeric',
